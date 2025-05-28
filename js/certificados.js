@@ -11,7 +11,7 @@
     const logado = JSON.parse(localStorage.getItem("logado"));
     if (!logado || logado.tipo !== "administrador") {
       alert("Acesso negado!");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
 
     const alunos = JSON.parse(localStorage.getItem("alunos")) || [];

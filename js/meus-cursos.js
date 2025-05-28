@@ -1,7 +1,7 @@
  const logado = JSON.parse(localStorage.getItem("logado"));
     if (!logado) {
       alert("Acesso negado! Faça login.");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
 
     document.getElementById("boasVindas").textContent = `Olá, ${logado.nome}. Estes são os cursos que você se inscreveu:`;
@@ -45,7 +45,7 @@
 
     function logout() {
       localStorage.removeItem("logado");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
 
     }
     function cancelarInscricao(cursoNome) {

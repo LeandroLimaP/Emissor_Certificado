@@ -10,5 +10,5 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
       alunos.push({ nome, usuario, email, cpf, senha });
       localStorage.setItem("alunos", JSON.stringify(alunos));
       alert("Cadastro realizado com sucesso!");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     });

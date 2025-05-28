@@ -5,7 +5,7 @@ const logado = JSON.parse(localStorage.getItem("logado"));
 
     if (!logado) {
       alert("Acesso negado! Faça login.");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     } else {
       tabela.style.display = "table";
       const alunos = JSON.parse(localStorage.getItem("alunos")) || [];

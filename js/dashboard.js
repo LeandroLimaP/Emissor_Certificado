@@ -1,7 +1,7 @@
     const logado = JSON.parse(localStorage.getItem("logado"));
     if (!logado) {
       alert("Acesso restrito. Faça login.");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
 
     document.getElementById("totalAlunos").textContent = (JSON.parse(localStorage.getItem("alunos")) || []).length;

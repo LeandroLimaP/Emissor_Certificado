@@ -1,7 +1,7 @@
 const logado = JSON.parse(localStorage.getItem("logado"));
     if (!logado) {
       alert("Acesso negado! Faça login.");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
 
     document.getElementById("boasVindas").textContent = `Bem-vindo(a), ${logado.nome}!`;
@@ -67,5 +67,5 @@ const logado = JSON.parse(localStorage.getItem("logado"));
 
     function logout() {
       localStorage.removeItem("logado");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
