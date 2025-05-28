@@ -94,11 +94,15 @@
       doc.text(`Valide em: validar.html`, largura / 2, 138, { align: "center" });
 
       // Linha e coordenador
+      doc.setFontSize(12);
+      doc.setFont("Helvetica", "italic");
+      doc.text("Cupinxas", largura / 2, 152, { align: "center" });
       doc.setDrawColor(0);
       doc.line(largura / 2 - 30, 160, largura / 2 + 30, 160);
       doc.setFontSize(12);
       doc.setFont("Helvetica", "bold");
       doc.text("COORDENADOR", largura / 2, 168, { align: "center" });
+
 
       // Ícones (circulares decorativos)
       doc.setFillColor(0, 51, 102);
