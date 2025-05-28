@@ -1,0 +1,29 @@
+<!-- alunos.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Aluno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/emissor/CSS/alunos.css">
+</head>
+<body>
+  <div id="areaAluno">
+    <h1>Cadastro de Aluno</h1>
+    <form class="formulario" id="alunoForm">
+      <input type="text" placeholder="Nome completo" required>
+      <input type="text" placeholder="Usuário" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="text" placeholder="CPF" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Salvar Aluno</button>
+    </form>
+  </div>
+  <div id="restrito" class="restrito" style="display:none">
+    Você não tem permissão para acessar esta página.
+  </div>
+  <script src="/emissor/js/alunos.js"></script>
+
+</body>
+</html>

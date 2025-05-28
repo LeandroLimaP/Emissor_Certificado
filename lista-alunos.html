@@ -1,0 +1,30 @@
+<!-- lista-alunos.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Alunos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/emissor/CSS/lista-aluno.css">
+  </style>
+</head>
+<body>
+  <h1>Alunos Cadastrados</h1>
+  <div id="restrito" class="restrito">Você não tem permissão para acessar esta página.</div>
+  <table id="tabelaAlunos" style="display: none">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>CPF</th>
+        <th>Cursos Inscritos</th>
+        <th id="acoesHeader">Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="/emissor/js/lista-alunos.js"></script>
+</body>
+</html>
