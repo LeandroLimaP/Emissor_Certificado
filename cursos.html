@@ -4,24 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Curso</title>
+  <title>Cadastrar Curso</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/cursos.css">
+  <link rel="stylesheet" href="cursos.css">
 </head>
 <body>
-  <div id="areaCurso">
-    <h1>Cadastro de Curso</h1>
-    <form class="formulario" id="cursoForm">
-      <input type="text" placeholder="Nome do Curso" required>
-      <input type="text" placeholder="Carga Horária" required>
-      <textarea placeholder="Descrição" required></textarea>
-      <input type="date" placeholder="Data" required>
-      <button type="submit">Salvar Curso</button>
-    </form>
-  </div>
-  <div id="restrito" class="restrito" style="display:none">
-    Você não tem permissão para acessar esta página.
+  <header>
+    <h1>Cadastrar Curso</h1>
+  </header>
+  <div class="container">
+    <nav>
+      <div>
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="dashboard.html">Tela Inicial</a></li>
+          <li><a href="alunos.html">Cadastrar Aluno</a></li>
+          <li><a href="lista-alunos.html">Listar Alunos</a></li>
+          <li><a href="cursos.html">Cadastrar Curso</a></li>
+          <li><a href="lista-curso.html">Listar Cursos</a></li>
+          <li><a href="certificados.html">Emitir Certificados</a></li>
+          <li><a href="validar.html">Validar Certificado</a></li>
+        </ul>
+      </div>
+      <div class="logout" onclick="logout()">Sair</div>
+    </nav>
+    <main>
+      <form id="formCurso">
+        <h2>Cadastro de Curso</h2>
+        <input type="text" id="nomeCurso" placeholder="Nome do Curso" required>
+         <textarea id="descricaoCurso" placeholder="Descrição do Curso" required></textarea>
+        <input type="number" id="cargaHoraria" placeholder="Carga Horária" required>
+        <button type="submit">Cadastrar Curso</button>
+      </form>
+    </main>
   </div>
   <script src="js/cursos.js"></script>
 </body>
 </html>
+

@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cursos Disponíveis</title>
+  <title>Lista de Cursos</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/lista-curso.css">
+  <link rel="stylesheet" href="lista-curso.css">
 </head>
 <body>
+  <script>
+    const logado = JSON.parse(localStorage.getItem("logado"));
+    if (logado && logado.tipo === "administrador") {
+      document.body.classList.add("admin");
+    }
+  </script>
   <header>
-    <h1>Cursos Disponíveis</h1>
+    <h1>Lista de Cursos</h1>
   </header>
   <div class="container">
     <nav>
@@ -17,20 +23,35 @@
         <h2>Menu</h2>
         <ul>
           <li><a href="dashboard.html">Tela Inicial</a></li>
-          <li><a href="validar.html">Validar Certificado</a></li>
-          <li><a href="lista-curso.html">Ver Cursos</a></li>
-          <li><a href="meus-cursos.html">Meus Cursos</a></li>
+          <li><a href="alunos.html">Cadastrar Aluno</a></li>
+          <li><a href="lista-alunos.html">Listar Alunos</a></li>
+          <li><a href="cursos.html">Cadastrar Curso</a></li>
+          <li><a href="lista-curso.html">Listar Cursos</a></li>
           <li><a href="certificados.html">Emitir Certificados</a></li>
+          <li><a href="validar.html">Validar Certificado</a></li>
         </ul>
       </div>
       <div class="logout" onclick="logout()">Sair</div>
     </nav>
     <main>
-      <div class="boas-vindas" id="boasVindas"></div>
-      <div id="listaCursos" class="cards"></div>
+      <section>
+        <h2>Cursos Cadastrados</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Carga Horária</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaCursos">
+            <!-- preenchido via JS -->
+          </tbody>
+        </table>
+      </section>
     </main>
   </div>
-
-  <script src="js/lista-curso.js"></script>
+  <script src="lista-curso.js"></script>
 </body>
 </html>
