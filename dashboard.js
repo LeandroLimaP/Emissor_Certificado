@@ -12,7 +12,7 @@
     const baseLinks = [
       { texto: "Tela Inicial", href: "dashboard.html" },
       { texto: "Validar Certificado", href: "validar.html" },
-      { texto: "Ver Cursos", href: "lista-curso.html" }
+      { texto: "Cursos", href: "meus-cursos.html" }
     ];
 
     const adminLinks = [

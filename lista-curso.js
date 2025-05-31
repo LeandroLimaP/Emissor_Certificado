@@ -36,6 +36,7 @@ function editarCurso(index) {
   const novoNome = prompt("Novo nome do curso:", curso.nome);
   const novaDescricao = prompt("Nova descrição:", curso.descricao);
   const novaCarga = prompt("Nova carga horária:", curso.carga);
+   const movaData = prompt("Nova Data:", curso.data);
 
   if (novoNome && novaDescricao && novaCarga) {
     cursos[index] = { nome: novoNome, descricao: novaDescricao, carga: novaCarga };

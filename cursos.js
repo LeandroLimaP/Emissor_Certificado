@@ -1,31 +1,18 @@
-// curso.js
+// cursos.js
 
-function logout() {
-  localStorage.removeItem("logado");
-  window.location.href = "index.html";
-}
+document.getElementById("formCurso").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("formCurso");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const descricao = document.getElementById("descricao").value;
+  const carga = document.getElementById("carga").value;
+  const data = document.getElementById("data").value;
 
-    const nome = document.getElementById("nomeCurso").value.trim();
-    const descricao = document.getElementById("descricaoCurso").value.trim();
-    const carga = document.getElementById("cargaHoraria").value.trim();
+  const cursos = JSON.parse(localStorage.getItem("cursos")) || [];
 
-    if (!nome || !descricao || !carga) {
-      alert("Preencha todos os campos corretamente.");
-      return;
-    }
+  cursos.push({ nome, descricao, carga, data });
 
-    const cursos = JSON.parse(localStorage.getItem("cursos")) || [];
-    cursos.push({ nome, descricao, carga });
-    localStorage.setItem("cursos", JSON.stringify(cursos));
-
-    alert("Curso cadastrado com sucesso!");
-    form.reset();
-  });
+  localStorage.setItem("cursos", JSON.stringify(cursos));
+  alert("Curso cadastrado com sucesso!");
+  document.getElementById("formCurso").reset();
 });
-
-

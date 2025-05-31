@@ -1,14 +1,7 @@
-/* estilos.css */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: #eef1f7;
+  margin: 0;
 }
 
 header {
@@ -28,9 +21,6 @@ nav {
   background-color: #003366;
   padding: 20px;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 nav h2 {
@@ -39,6 +29,7 @@ nav h2 {
 
 nav ul {
   list-style: none;
+  padding: 0;
 }
 
 nav li {
@@ -48,8 +39,8 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
-  display: block;
   padding: 8px 12px;
+  display: block;
   border-radius: 4px;
 }
 
@@ -57,33 +48,8 @@ nav a:hover {
   background-color: #002244;
 }
 
-.logout {
-  margin-top: 30px;
-  padding: 10px;
-  background-color: #dc3545;
-  color: white;
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 main {
   padding: 30px;
-}
-
-section {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  color: #004080;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 table {
@@ -91,6 +57,7 @@ table {
   border-collapse: collapse;
   background-color: white;
   border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
@@ -98,7 +65,6 @@ th, td {
   padding: 14px 18px;
   border-bottom: 1px solid #eaeaea;
   text-align: left;
-  vertical-align: middle;
 }
 
 th {
@@ -108,83 +74,4 @@ th {
 
 tr:hover {
   background-color: #f5faff;
-}
-
-td img {
-  width: 60px;
-  height: 60px;
-  border-radius: 6px;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-button {
-  margin-right: 6px;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #004080;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #002244;
-}
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-  }
-
-  nav h2,
-  .logout {
-    display: none;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav li {
-    margin: 5px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  table, th, td {
-    font-size: 0.9rem;
-  }
-
-  td img {
-    width: 40px;
-    height: 40px;
-  }
-
-  button {
-    font-size: 0.8rem;
-    padding: 5px 8px;
-  }
-}
-
-/* Visibilidade diferenciada (opcional) */
-.admin-only {
-  display: none;
-}
-
-body.admin .admin-only {
-  display: block;
 }
