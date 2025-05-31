@@ -2,7 +2,7 @@
 
 function logout() {
   localStorage.removeItem("logado");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
