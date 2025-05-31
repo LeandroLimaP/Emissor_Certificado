@@ -164,4 +164,4 @@ Como o projeto roda totalmente no frontend, os dados são manipulados via **Loca
 ---
 
 ## 👨‍💻 Desenvolvido por
-Leandro Lima – Projeto acadêmico de Desenvolvimento Frontend
+Leandro Lima, Andrew Matheus, Gabriel Henrique, Marcos Vinicius, Miguel Mariano– Projeto acadêmico de Desenvolvimento Frontend
